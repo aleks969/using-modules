@@ -1,4 +1,5 @@
 import "../scss/app.scss";
+import * as Ramda from "ramda";
 import { pluck } from "ramda";
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
@@ -10,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
   ];
   const articles = document.querySelectorAll("article");
 
-  const getClasses = pluck("class");
+  const getClasses = Ramda.pluck("class");
   const classes = getClasses(arrayToPluck);
   // console.log(classes);
 
